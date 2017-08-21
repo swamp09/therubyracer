@@ -29,7 +29,7 @@ describe V8::C::External do
       exception = trycatch.Exception()
       exception.should_not be_nil
       exception.IsNativeError().should be_truthy
-      trycatch.StackTrace().Utf8Value().should match /boom.*three.*two.*one/m
+      trycatch.StackTrace().Utf8Value().should match (/boom.*three.*two.*one/m)
       message = trycatch.Message();
       message.should_not be_nil
       message.Get().Utf8Value().should eql "Uncaught Error: boom!"
