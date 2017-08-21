@@ -23,7 +23,7 @@ describe V8::C::External do
       JS
       filename = V8::C::String::New("<eval>")
       script = V8::C::Script::New(source, filename)
-      result = script.Run()
+      script.Run()
       trycatch.HasCaught().should be_truthy
       trycatch.CanContinue().should be_truthy
       exception = trycatch.Exception()
