@@ -25,13 +25,13 @@ describe V8::Conversion do
     context "for 32-bit numbers" do
       it "should convert positive integer" do
         cxt['integer_a'] = 123
-        cxt['integer_a'].should == 123
+        cxt['integer_a'].should eq (123)
         cxt['integer_a'].should be_kind_of(Integer)
       end
 
       it "should convert negative integer" do
         cxt['integer_b'] = -123
-        cxt['integer_b'].should == -123
+        cxt['integer_b'].should eq (-123)
         cxt['integer_b'].should be_kind_of(Integer)
       end
     end
