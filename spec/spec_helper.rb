@@ -38,5 +38,5 @@ end
 RSpec.configure do |c|
   c.include V8ContextHelpers
   c.extend V8ContextHelpers::GroupMethods
-  c.expect_with(:rspec) { |c| c.syntax = :should }
+  c.expect_with(:rspec) { |_c| _c.syntax = :should }
 end
